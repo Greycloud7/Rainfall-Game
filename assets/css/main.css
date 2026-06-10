@@ -2310,3 +2310,10 @@ input, select, textarea {
 			}
 
 		}
+/* Fix text legibility over the background art */
+h1, h2, p, .label {
+    text-shadow: 2px 2px 0px #000000, 
+                -1px -1px 0px #000000, 
+                 1px -1px 0px #000000, 
+                -1px  1px 0px #000000;
+}
