@@ -2317,26 +2317,5 @@ h1, h2, p, .label {
                  1px -1px 0px #000000, 
                 -1px  1px 0px #000000;
 }
-/* Apply a clean, highly readable font across the whole site */
-body, input, select, textarea {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;         /* Ensures text isn't too small to read */
-    line-height: 1.6;        /* Adds space between lines so letters don't bunch up */
-    letter-spacing: 0.05em;  /* Slightly spaces out letters for maximum clarity */
-}
-/* Force browsers to render text with razor-sharp anti-aliasing */
-html, body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
-/* Clean up headings and titles */
-h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 700;       /* Makes headings bold */
-    color: #ffffff;         /* Clean, pure white text */
-    letter-spacing: 0.02em;
-    margin-bottom: 1rem;    /* Pushes content below it down slightly so it breathes */
-}
 
 
