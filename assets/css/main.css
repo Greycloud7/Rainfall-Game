@@ -2316,6 +2316,30 @@ h1, h2, p, .label {
                 -1px -1px 0px #000000, 
                  1px -1px 0px #000000, 
                 -1px  1px 0px #000000;
+	}
+	/* ==========================================================================
+   White Background Text Ghosting Correction
+   ========================================================================== */
+
+/* Target light/white sections to force sharp, shadow-free rendering on PC */
+.main.style1:not(.dark), 
+.main.style3, 
+.box:not(.style2),
+[style*="background-color: #fff"], 
+[style*="background-color: white"] {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-shadow: none !important;
+}
+
+/* Ensure all text inside white sections uses solid, crisp vector edges */
+.main.style1:not(.dark) *, 
+.main.style3 *, 
+.box:not(.style2) * {
+    text-shadow: none !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
 }
 
 
