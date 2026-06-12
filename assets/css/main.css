@@ -2413,3 +2413,23 @@ ul.icons li a:hover {
     white-space: normal !important; /* Forces text to break to a new line if needed */
     width: 100% !important;
 }
+/* ==========================================================================
+   Ultimate Mobile Footer Wrap Fix
+   ========================================================================== */
+.mobile-safe-footer {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+}
+
+.mobile-safe-footer p {
+    display: block !important;
+    white-space: normal !important; /* Overrides any rule blocking text from bending */
+    word-wrap: break-word !important; /* Safely breaks long email strings if needed */
+    overflow-wrap: break-word !important;
+    margin: 0.5rem auto !important;
+    width: 100% !important;
+}
