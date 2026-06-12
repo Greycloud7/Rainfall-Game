@@ -12,6 +12,16 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			/* Force the page to display instantly on PC, bypassing the script lock */
+			html, body {
+				opacity: 1.0 !important;
+				visibility: visible !important;
+			}
+			
+			body:before, body:after {
+				display: none !important;
+				opacity: 0 !important;
+			}
 			/* Custom spacing tailored for reading long stories */
 			.story-container {
 				max-width: 800px;
