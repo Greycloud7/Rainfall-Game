@@ -21,6 +21,12 @@ HTML
 				opacity: 1.0 !important;
 				visibility: visible !important;
 			}
+			/* Banish the floating template credits and stray text headers */
+			#footer, .logo, #header + #footer, #header {
+				display: none !important;
+				opacity: 0 !important;
+				visibility: hidden !important;
+			}
 			
 			body:before, body:after {
 				display: none !important;
