@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -17,7 +18,15 @@
 		<style>
 			/* Injects your custom Aseprite background into the About Game area */
 			#one {
-				background-image: url("images/about-bg.png") !important; /* Change extension to .jpg if needed */
+				background-image: url("images/about-bg.png") !important;
+				background-size: cover !important;
+				background-position: center !important;
+				background-attachment: scroll !important;
+			}
+
+			/* NEW: Injects your custom artwork behind the Art & Making Of section */
+			#two {
+				background-image: url("images/art-bg.png") !important; /* Ensure your file is named art-bg.png inside your images folder */
 				background-size: cover !important;
 				background-position: center !important;
 				background-attachment: scroll !important;
@@ -44,11 +53,11 @@
 		<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-    <h2>RAINFALL</h2>
-    <p style="font-size: 1.25rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 10px;">
-        The Frogspawn Chronicles
-    </p>
-</header>
+						<h2>RAINFALL</h2>
+						<p style="font-size: 1.25rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 10px;">
+							The Frogspawn Chronicles
+						</p>
+					</header>
 					<p>A world of steel, magic, and forgotten lore. Dive into a unforgettable saga of rebellion, betrayal, and the journey to save your kingdom. The swamplands will never be the same again.</p>
 					
 					<div style="margin: 2em 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
@@ -63,16 +72,16 @@
 			</section>
 
 		<section id="one" class="main style2 right dark">
-	<div class="content box style2">
-		<header>
-			<h2>About Game</h2>
-		</header>
-		<p>Rainfall is an atmospheric 2D pixel adventure game set in a fantasy universe. Master 4-way combat movement, explore beautiful biome environments, and uncover forgotten lore as you fight the Corrupted Kings in order to save your Twin.</p>
-		
-		<p style="margin-top: 1.5rem;"><a href="story.html" class="button style2">Read the Story &amp; Lore</a></p>
-	</div>
-	<a href="#two" class="button style2 down anchored">Next</a>
-</section>
+			<div class="content box style2">
+				<header>
+					<h2>About Game</h2>
+				</header>
+				<p>Rainfall is an atmospheric 2D pixel adventure game set in a fantasy universe. Master 4-way combat movement, explore beautiful biome environments, and uncover forgotten lore as you fight the Corrupted Kings in order to save your Twin.</p>
+				
+				<p style="margin-top: 1.5rem;"><a href="story.html" class="button style2">Read the Story &amp; Lore</a></p>
+			</div>
+			<a href="#two" class="button style2 down anchored">Next</a>
+		</section>
 
 		<section id="two" class="main style1 left">
 				<div class="content box style2">
