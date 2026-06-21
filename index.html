@@ -15,6 +15,17 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			/* Force GitHub Pages to render layout instantly, bypassing potential scroll lock scripts */
+			html, body {
+				opacity: 1.0 !important;
+				visibility: visible !important;
+			}
+			
+			body:before, body:after {
+				display: none !important;
+				opacity: 0 !important;
+			}
+
 			/* Injects your custom Aseprite background into the About Game area */
 			#one {
 				background-image: url("images/about-bg.png") !important;
@@ -36,41 +47,41 @@
 
 		<header id="header">
 			<h1>Rainfall Soft Ltd</h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#one">About Game</a></li>
-						<li><a href="#two">The Art</a></li>
-						<li><a href="#work">Gallery</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a href="story.html" class="external">The Lore</a></li>
-						<li><a href="making-of.html" class="external">Making Of</a></li>
-					</ul>
-				</nav>
-			</header>
+			<nav id="nav">
+				<ul>
+					<li><a href="#intro">Intro</a></li>
+					<li><a href="#one">About Game</a></li>
+					<li><a href="#two">The Art</a></li>
+					<li><a href="#work">Gallery</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="story.html" class="external">The Lore</a></li>
+					<li><a href="making-of.html" class="external">Making Of</a></li>
+				</ul>
+			</nav>
+		</header>
 
 		<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>
-						<img src="game-logo.png" alt="Rainfall: The Frogspawn Chronicles Logo" style="max-width: 100%; width: 550px; height: auto; display: block; margin: 0 auto 20px auto;" />
-						
-						<div style="display: none !important;">
-							<h2>RAINFALL</h2>
-							<p>The Frogspawn Chronicles</p>
-						</div>
-					</header>
-					<p>A world of steel, magic, and forgotten lore. Dive into a unforgettable saga of rebellion, betrayal, and the journey to save your kingdom. The swamplands will never be the same again.</p>
+			<div class="content">
+				<header>
+					<img src="game-logo.png" alt="Rainfall: The Frogspawn Chronicles Logo" style="max-width: 100%; width: 550px; height: auto; display: block; margin: 0 auto 20px auto;" />
 					
-					<div style="margin: 2em 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-						<a href="https://www.kickstarter.com/profile/rainfallgame" class="button style2" target="_blank" style="background-color: #05ce78; color: #fff !important; border-color: #05ce78; min-width: 250px;">Follow on Kickstarter Soon</a>
-						<a href="#" class="button style2" style="background-color: #171a21; color: #fff !important; border-color: #171a21; min-width: 250px;">Wishlist on Steam Soon</a>
+					<div style="display: none !important;">
+						<h2>RAINFALL</h2>
+						<p>The Frogspawn Chronicles</p>
 					</div>
-
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
+				</header>
+				<p>A world of steel, magic, and forgotten lore. Dive into an unforgettable saga of rebellion, betrayal, and the journey to save your kingdom. The swamplands will never be the same again.</p>
+				
+				<div style="margin: 2em 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+					<a href="https://www.kickstarter.com/profile/rainfallgame" class="button style2" target="_blank" style="background-color: #05ce78; color: #fff !important; border-color: #05ce78; min-width: 250px;">Follow on Kickstarter Soon</a>
+					<a href="#" class="button style2" style="background-color: #171a21; color: #fff !important; border-color: #171a21; min-width: 250px;">Wishlist on Steam Soon</a>
 				</div>
-			</section>
+
+				<footer>
+					<a href="#one" class="button style2 down">More</a>
+				</footer>
+			</div>
+		</section>
 
 		<section id="one" class="main style2 right dark">
 			<div class="content box style2">
@@ -85,139 +96,134 @@
 		</section>
 
 		<section id="two" class="main style1 left">
-				<div class="content box style2">
-					<header>
-						<h2>2D Pixel Art &amp; Game Development</h2>
-					</header>
+			<div class="content box style2">
+				<header>
+					<h2>2D Pixel Art &amp; Game Development</h2>
+				</header>
+				
+				<p class="hero-lead">Building a 2D action fantasy world requires meticulous precision.</p>
+				
+				<div class="feature-grid">
+					<div class="feature-item">
+						<h3>Crafted Pixel Art</h3>
+						<p>Every environment, character frame, and blade of grass in <em>Rainfall</em> is crafted using dedicated 2D pixel art techniques, focusing on atmospheric tilesets.</p>
+					</div>
 					
-					<p class="hero-lead">Building a 2D action fantasy world requires meticulous precision.</p>
-					
-					<div class="feature-grid">
-						<div class="feature-item">
-							<h3>Crafted Pixel Art</h3>
-							<p>Every environment, character frame, and blade of grass in <em>Rainfall</em> is crafted using dedicated 2D pixel art techniques, focusing on atmospheric tilesets.</p>
-						</div>
-						
-						<div class="feature-item">
-							<h3>Top-Down Mechanics</h3>
-							<p>Features smooth 4-way movement blueprints and custom physics to bring the dense, dangerous terrain to life.</p>
-						</div>
+					<div class="feature-item">
+						<h3>Top-Down Mechanics</h3>
+						<p>Features smooth 4-way movement blueprints and custom physics to bring the dense, dangerous terrain to life.</p>
+					</div>
 
-						<div class="feature-item">
-							<h3>Pixel Design</h3>
-							<p>Bridging classic pixelated aesthetics with modern mechanics taking ideas from raw concept sketches to detailed sprite sheets animated frame by frame.</p>
-						</div>
+					<div class="feature-item">
+						<h3>Pixel Design</h3>
+						<p>Bridging classic pixelated aesthetics with modern mechanics taking ideas from raw concept sketches to detailed sprite sheets animated frame by frame.</p>
 					</div>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
-			</section>
+			</div>
+			<a href="#work" class="button style2 down anchored">Next</a>
+		</section>
 
 		<section id="work" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>The Project Archive</h2>
-						<p>A look behind the curtain at the visual concepts, and evolving design ideas shaping the Rainfall: The Frogspawn Chronicles game.</p>
-					</header>
+			<div class="content">
+				<header>
+					<h2>The Project Archive</h2>
+					<p>A look behind the curtain at the visual concepts, and evolving design ideas shaping the Rainfall: The Frogspawn Chronicles game.</p>
+				</header>
 
-<div class="gallery">
-	
-	<article class="from-left">
-		<a href="images/fulls/full-frog.png" class="image fit"><img src="images/thumbs/thumb-frog.png" title="Rainfall 2D Character Blueprints" alt="2D pixel art character blueprints and hero silhouettes for Rainfall RPG" /></a>
-		<div class="caption">
-			<h3>Character Concepts</h3>
-			<p>Designing the hero and enemies frame by frame, focusing on distinct silhouettes and tactical visual clarity.</p>
-		</div>
-	</article>
+				<div class="gallery">
+					
+					<article class="from-left">
+						<a href="images/fulls/full-frog.png" class="image fit"><img src="images/thumbs/thumb-frog.png" title="Rainfall 2D Character Blueprints" alt="2D pixel art character blueprints and hero silhouettes for Rainfall RPG" /></a>
+						<div class="caption">
+							<h3>Character Concepts</h3>
+							<p>Designing the hero and enemies frame by frame, focusing on distinct silhouettes and tactical visual clarity.</p>
+						</div>
+					</article>
 
-	<article class="from-right">
-		<div class="image fit"><img src="images/thumbs/02.jpg" alt="Dark fantasy woodland top-down pixel art tilesets and game map layouts" style="cursor: default;" /></div>
-		<div class="caption">
-			<h3>Atmospheric Environments</h3>
-			<p>Drafting the grim, dark woodland zones and designing the modular tilesets that form the map layout.</p>
-		</div>
-	</article>
+					<article class="from-right">
+						<div class="image fit"><img src="images/thumbs/02.jpg" alt="Dark fantasy woodland top-down pixel art tilesets and game map layouts" style="cursor: default;" /></div>
+						<div class="caption">
+							<h3>Atmospheric Environments</h3>
+							<p>Drafting the grim, dark woodland zones and designing the modular tilesets that form the map layout.</p>
+						</div>
+					</article>
 
-	<article class="from-left">
-		<div class="image fit"><img src="images/thumbs/03.jpg" alt="Aseprite pixel art sprite sheets showing 4-way character movement logic" style="cursor: default;" /></div>
-		<div class="caption">
-			<h3>Sprite Sheets &amp; Logic</h3>
-			<p>Mapping out smooth 4-way animation frames to ensure responsive, satisfying controls in every battle encounter.</p>
-		</div>
-	</article>
+					<article class="from-left">
+						<div class="image fit"><img src="images/thumbs/03.jpg" alt="Aseprite pixel art sprite sheets showing 4-way character movement logic" style="cursor: default;" /></div>
+						<div class="caption">
+							<h3>Sprite Sheets &amp; Logic</h3>
+							<p>Mapping out smooth 4-way animation frames to ensure responsive, satisfying controls in every battle encounter.</p>
+						</div>
+					</article>
 
-	<article class="from-right">
-		<div class="image fit"><img src="images/thumbs/04.jpg" alt="Unity game engine design notes for absorbing enemy skills and boss combat mechanics" style="cursor: default;" /></div>
-		<div class="caption">
-			<h3>Enemy Coding</h3>
-			<p>Creating each main enemy individually in great detail including the unique items and equipment players unlock upon defeating them.</p>
-		</div>
-	</article>
-
-</div>
+					<article class="from-right">
+						<div class="image fit" style="position: relative; overflow: hidden; background: #000;">
+							<video controls loop muted playsinline style="width: 100%; display: block; object-fit: cover;">
+								<source src="images/enemy-coding.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="caption">
+							<h3>Enemy Coding</h3>
+							<p>Creating each main enemy individually in great detail including the unique items and equipment players unlock upon defeating them.</p>
+						</div>
+					</article>
 
 				</div>
-			</section>
+			</div>
+		</section>
 
 		<section id="contact" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>Experience an Epic Tale</h2>
-						<p>Are you a player, publisher, or creator looking to dive deeper into the world of <em>Rainfall</em>?<br />
-						Reach out directly at the official studio inbox: <strong>contact@rainfallgame.com</strong></p>
-					</header>
-					<div class="box">
-						
-						<ul class="icons">
-							<li><a href="YOUR_TIKTOK_URL" class="icon brands fa-tiktok" target="_blank"><span class="label">TikTok</span></a></li>
-							<li><a href="https://x.com/Rainfall_Soft" class="icon brands fa-twitter" target="_blank"><span class="label">X (Twitter)</span></a></li>
-							<li><a href="https://www.instagram.com/rainfall_soft/?hl=en" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-							<li><a href="https://www.kickstarter.com/profile/rainfallgame" class="icon brands fa-kickstarter" target="_blank"><span class="label">Kickstarter</span></a></li>
-							<li><a href="YOUR_DISCORD_URL" class="icon brands fa-discord" target="_blank"><span class="label">Discord</span></a></li>
+			<div class="content">
+				<header>
+					<h2>Experience an Epic Tale</h2>
+					<p>Are you a player, publisher, or creator looking to dive deeper into the world of <em>Rainfall</em>?<br />
+					Reach out directly at the official studio inbox: <strong>contact@rainfallgame.com</strong></p>
+				</header>
+				<div class="box">
+					
+					<ul class="icons">
+						<li><a href="YOUR_TIKTOK_URL" class="icon brands fa-tiktok" target="_blank"><span class="label">TikTok</span></a></li>
+						<li><a href="https://x.com/Rainfall_Soft" class="icon brands fa-twitter" target="_blank"><span class="label">X (Twitter)</span></a></li>
+						<li><a href="https://www.instagram.com/rainfall_soft/?hl=en" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.kickstarter.com/profile/rainfallgame" class="icon brands fa-kickstarter" target="_blank"><span class="label">Kickstarter</span></a></li>
+						<li><a href="YOUR_DISCORD_URL" class="icon brands fa-discord" target="_blank"><span class="label">Discord</span></a></li>
+					</ul>
+
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+							<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+							<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+						</div>
+						<ul class="actions special">
+							<li><input type="submit" value="Send Message" /></li>
 						</ul>
+					</form>
 
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-
-					</div>
 				</div>
-				
-				<footer id="footer">
-					<div class="mobile-safe-footer">
-						<p style="margin-bottom: 0.5rem;">
-							<img src="logo.png" alt="Rainfall Soft Logo" style="width: 24px; height: auto; vertical-align: middle; margin-right: 6px; display: inline-block;" />
-							&copy; 2026 Rainfall Soft Ltd. Developed by Anthony. All Rights Reserved.
-						</p>
-						<p>Studio Contact: <a href="mailto:contact@rainfallgame.com" style="color: #000000 !important; text-decoration: underline;">contact@rainfallgame.com</a></p>
-					</div>
-				</footer>
-			</section>
-
-		<footer id="footer">
-				<ul class="icons">
-					<li><a href="YOUR_TIKTOK_URL" class="icon brands fa-tiktok" target="_blank"><span class="label">TikTok</span></a></li>
-					<li><a href="https://x.com/Rainfall_Soft" class="icon brands fa-twitter" target="_blank"><span class="label">X (Twitter)</span></a></li>
-					<li><a href="https://www.instagram.com/rainfall_soft/?hl=en" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-					<li><a href="https://www.kickstarter.com/profile/rainfallgame" class="icon brands fa-kickstarter" target="_blank"><span class="label">Kickstarter</span></a></li>
-					<li><a href="YOUR_DISCORD_URL" class="icon brands fa-discord" target="_blank"><span class="label">Discord</span></a></li>
-				</ul>
+			</div>
+			
+			<footer id="footer">
+				<div class="mobile-safe-footer">
+					<p style="margin-bottom: 0.5rem;">
+						<img src="logo.png" alt="Rainfall Soft Logo" style="width: 24px; height: auto; vertical-align: middle; margin-right: 6px; display: inline-block;" />
+						&copy; 2026 Rainfall Soft Ltd. Developed by Anthony. All Rights Reserved.
+					</p>
+					<p>Studio Contact: <a href="mailto:contact@rainfallgame.com" style="color: #000000 !important; text-decoration: underline;">contact@rainfallgame.com</a></p>
+				</div>
 			</footer>
+		</section>
 
 		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
+</html>
 </html>
