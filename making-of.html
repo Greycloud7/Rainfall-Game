@@ -1,15 +1,3 @@
-Here is your complete, fully updated making-of.html file.
-
-What I Did:
-Integrated the 4-Directional Crow Gallery: Placed the crow_south, crow_north, crow_east, and crow_west gallery block smoothly inside your <main> text layout container so it stays perfectly aligned with your formatting rules.
-
-Fixed the CSS Text Color Conflict: Your template script uses dark styling templates for galleries. Because your custom <style> code at the top forces all text on this page to be black (color: #000000 !important;), the captions under the gallery boxes would have turned invisible against the layout blocks. I added a quick line in the <style> block to keep your gallery text white and readable while keeping your main essay body black.
-
-Linked the Missing Gallery Pop-Up Scripts: Added the script hooks right at the very bottom so the images pop up smoothly when clicked instead of crashing.
-
-You can copy and paste this code straight over your current file:
-
-HTML
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -72,3 +60,89 @@ HTML
 		</nav>
 
 		<main style="max-width: 45em; margin: 2rem auto 3rem auto; padding: 0 1rem; width: 100%; box-sizing: border-box;">
+			
+			<h2 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; font-weight: 700 !important; font-size: 2rem !important; border-bottom: 2px solid #000000; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+				Art & Making Of
+			</h2>
+
+			<p style="margin-bottom: 1.25rem;">
+				Game development is a creative process, and it’s incredibly easy to keep adding extra features (more boss skills, massive secondary maps, complex systems). This is the number one reason solo indie games get delayed.
+			</p>
+			
+			<p style="margin-bottom: 1.25rem;">
+				Creating a 2D action RPG requires a balance between precise controls and intricate asset production. To ensure the gameplay feels intuitive and modern, <em>Rainfall</em> utilises a full 8-directional vector movement system that allows seamless diagonal traversal on controllers and keyboards.
+			</p>
+
+			<p style="margin-bottom: 1.25rem;">
+				To maintain a sustainable development timeline as a solo creator, the visual rendering is built on a streamlined 4-way character animation framework (Up, Down, Left, Right). This allows me to focus on handcrafting detailed pixel art for every single animation frame, ensuring it is kept to the aesthetic of the game's world without risking the massive production delays often associated with massive asset sheets.
+			</p>
+
+			<p style="margin-bottom: 2rem;">
+				As a solo developer, I am solely responsible for everything from programming in Unity to hand drawing every pixel art tileset in Aseprite. And as unexpected technical bugs can impact development speed, the production timeline has been established to ensure it can be delivered on time. My priority is delivering a polished, fun 2D RPG experience rather than rushing out a buggy unfinished build.
+			</p>
+
+			<div class="gallery" style="margin-top: 3rem;">
+				
+				<article class="from-left">
+					<a href="images/fulls/crow_south.png" class="image fit">
+						<img src="images/thumbs/crow_south.png" title="Crow - South (Facing Forward)" alt="4-way character movement animations facing south" />
+					</a>
+					<div class="caption">
+						<h3>South Direction</h3>
+						<p>Character sprites and idle frames facing forward toward the camera view.</p>
+					</div>
+				</article>
+
+				<article class="from-right">
+					<a href="images/fulls/crow_north.png" class="image fit">
+						<img src="images/thumbs/crow_north.png" title="Crow - North (Facing Back)" alt="4-way character movement animations facing north" />
+					</a>
+					<div class="caption">
+						<h3>North Direction</h3>
+						<p>Character sprites and running loops facing away from the screen position.</p>
+					</div>
+				</article>
+
+				<article class="from-left">
+					<a href="images/fulls/crow_east.png" class="image fit">
+						<img src="images/thumbs/crow_east.png" title="Crow - East (Facing Right)" alt="4-way character movement animations facing east" />
+					</a>
+					<div class="caption">
+						<h3>East Direction</h3>
+						<p>Lateral action assets and movement frames calibrated for right-facing logic paths.</p>
+					</div>
+				</article>
+
+				<article class="from-right">
+					<a href="images/fulls/crow_west.png" class="image fit">
+						<img src="images/thumbs/crow_west.png" title="Crow - West (Facing Left)" alt="4-way character movement animations facing west" />
+					</a>
+					<div class="caption">
+						<h3>West Direction</h3>
+						<p>Lateral action assets and movement frames calibrated for left-facing logic paths.</p>
+					</div>
+				</article>
+
+			</div>
+
+		</main>
+
+		<div class="mobile-safe-footer" style="padding: 2rem 1rem; text-align: center; clear: both;">
+			<p style="margin-bottom: 0.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+				<img src="logo.png" alt="Rainfall Soft Logo" style="width: 24px; height: auto; vertical-align: middle; margin-right: 6px; display: inline-block;" />
+				&copy; 2026 Rainfall Soft. Developed by Anthony. All Rights Reserved.
+			</p>
+			<p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Studio Contact: <a href="mailto:contact@rainfallgame.com" style="text-decoration: underline;">contact@rainfallgame.com</a></p>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
