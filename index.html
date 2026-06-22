@@ -41,12 +41,40 @@
 				background-position: center !important;
 				background-attachment: scroll !important;
 			}
+
+			/* Activates a swipeable navigation row for compact phone viewports */
+			@media screen and (max-width: 736px) {
+				#header {
+					display: block !important;
+					visibility: visible !important;
+					position: fixed !important;
+					top: 0;
+					left: 0;
+					width: 100%;
+					z-index: 10000 !important;
+					background: rgba(15, 20, 18, 0.98) !important; /* Deep dark swamp tint matching layout aesthetics */
+					padding: 0.85rem 1rem !important;
+					box-sizing: border-box;
+					border-bottom: 1px solid rgba(127, 169, 155, 0.2);
+				}
+				#header h1 {
+					font-size: 1rem !important;
+					margin-bottom: 0.25rem !important;
+				}
+				.mobile-nav-inline {
+					display: flex !important;
+				}
+				#intro {
+					padding-top: 140px !important;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<header id="header">
 			<h1>Rainfall Soft Ltd</h1>
+			
 			<nav id="nav">
 				<ul>
 					<li><a href="#intro">Intro</a></li>
@@ -58,6 +86,16 @@
 					<li><a href="making-of.html" class="external">Making Of</a></li>
 				</ul>
 			</nav>
+
+			<div class="mobile-nav-inline" style="display: none; width: 100%; overflow-x: auto; white-space: nowrap; padding: 0.4rem 0; margin-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.08); -webkit-overflow-scrolling: touch; gap: 14px;">
+				<a href="#intro" style="color: #fff !important; text-decoration: none; font-size: 0.85rem; font-weight: bold; font-family: sans-serif;">Intro</a>
+				<a href="#one" style="color: #fff !important; text-decoration: none; font-size: 0.85rem; font-weight: bold; font-family: sans-serif;">About</a>
+				<a href="#two" style="color: #fff !important; text-decoration: none; font-size: 0.85rem; font-weight: bold; font-family: sans-serif;">The Art</a>
+				<a href="#work" style="color: #fff !important; text-decoration: none; font-size: 0.85rem; font-weight: bold; font-family: sans-serif;">Gallery</a>
+				<a href="#contact" style="color: #fff !important; text-decoration: none; font-size: 0.85rem; font-weight: bold; font-family: sans-serif;">Contact</a>
+				<a href="story.html" style="color: #7fa99b !important; text-decoration: underline; font-size: 0.85rem; font-weight: bold; font-family: sans-serif;">The Lore</a>
+				<a href="making-of.html" style="color: #7fa99b !important; text-decoration: underline; font-size: 0.85rem; font-weight: bold; font-family: sans-serif;">Making Of</a>
+			</div>
 		</header>
 
 		<section id="intro" class="main style1 dark fullscreen">
@@ -157,19 +195,19 @@
 					</article>
 
 					<article class="from-right">
-	<div class="image fit" style="position: relative; overflow: hidden; background: #000;">
-		<video controls loop muted playsinline 
-			onclick="event.stopPropagation(); if(this.paused) this.play(); else this.paused();" 
-			style="width: 100%; display: block; object-fit: cover; position: relative; z-index: 10;">
-			<source src="images/enemy-coding.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-	</div>
-	<div class="caption">
-	<h3>Coding</h3>
-	<p>Creating each main enemy individually in great detail including the unique items and equipment players unlock upon defeating them.</p>
-</div>
-</article>
+						<div class="image fit" style="position: relative; overflow: hidden; background: #000;">
+							<video controls loop muted playsinline 
+								onclick="event.stopPropagation(); if(this.paused) this.play(); else this.paused();" 
+								style="width: 100%; display: block; object-fit: cover; position: relative; z-index: 10;">
+								<source src="images/enemy-coding.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="caption">
+							<h3>Coding</h3>
+							<p>Creating each main enemy individually in great detail including the unique items and equipment players unlock upon defeating them.</p>
+						</div>
+					</article>
 
 				</div>
 			</div>
@@ -227,5 +265,4 @@
 		<script src="assets/js/main.js"></script>
 
 	</body>
-</html>
 </html>
