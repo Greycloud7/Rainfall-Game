@@ -42,12 +42,20 @@
 				background-attachment: scroll !important;
 			}
 
+			/* Lock header at the absolute top of the page globally (No longer follows user) */
+			#header {
+				position: absolute !important;
+				top: 0 !important;
+				left: 0 !important;
+				width: 100% !important;
+			}
+
 			/* Activates a swipeable navigation row for compact phone viewports */
 			@media screen and (max-width: 736px) {
 				#header {
 					display: block !important;
 					visibility: visible !important;
-					position: fixed !important;
+					position: absolute !important; /* Changed from fixed to absolute to lock it at top */
 					top: 0;
 					left: 0;
 					width: 100%;
