@@ -8,7 +8,7 @@
 		<meta name="keywords" content="Rainfall game, Rainfall The Frogspawn Chronicles, top down RPG, indie games, pixel art RPG, Aseprite, Unity indie game, action RPG fantasy" />
 		<meta name="author" content="Anthony" />
 		<meta name="google-site-verification" content="91f09c69ebd5a730" />
-		<link rel="icon" type="image/png" href="logo.png" />
+		<link class="icon" type="image/png" href="logo.png" />
 		<link rel="apple-touch-icon" href="logo.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -55,6 +55,25 @@
 				visibility: visible !important;
 			}
 
+			/* --- LOGO ILLUMINATION FIXES --- */
+			/* Tone down Spectral's default muddy background overlay so the banner is clearer */
+			#banner:after {
+				background: rgba(16, 22, 19, 0.4) !important; 
+			}
+
+			/* Add a soft, radiant glow behind your vector logo so it stands out beautifully against the dark background */
+			.main-game-logo {
+				max-width: 100%;
+				width: 550px;
+				height: auto;
+				display: block;
+				margin: 0 auto 2rem auto;
+				filter: drop-shadow(0 0 25px rgba(33, 178, 166, 0.5)) drop-shadow(0 0 45px rgba(5, 206, 120, 0.2));
+				background: radial-gradient(circle, rgba(33, 178, 166, 0.15) 0%, rgba(0,0,0,0) 70%);
+				padding: 1rem;
+				border-radius: 50%;
+			}
+
 			/* Custom tweaks to layout the video logs cleanly on desktop and mobile */
 			.video-grid {
 				display: grid;
@@ -88,6 +107,9 @@
 					grid-template-columns: 1fr;
 					gap: 1.5rem;
 				}
+				.main-game-logo {
+					width: 85% !important; /* Give it a little tighter scaling on smaller phones */
+				}
 			}
 
 			/* Fix button text cutoff (...) in the CTA section */
@@ -107,11 +129,9 @@
 	</head>
 	<body class="landing is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
+				<header id="header" class="alt">
 						<h1><a href="index.html">Rainfall Soft Ltd</a></h1>
 						<nav id="nav">
 							<ul>
@@ -133,10 +153,9 @@
 						</nav>
 					</header>
 
-				<!-- Banner -->
-					<section id="banner">
+				<section id="banner">
 						<div class="inner">
-							<img src="game-logo.png" alt="Rainfall: The Frogspawn Chronicles Logo" style="max-width: 100%; width: 550px; height: auto; display: block; margin: 0 auto 2rem auto;" />
+							<img src="game-logo.png" alt="Rainfall: The Frogspawn Chronicles Logo" class="main-game-logo" />
 							<p>A world of steel, magic, and forgotten lore.<br />
 							Dive into an unforgettable saga of rebellion, betrayal, and the journey to save your kingdom.<br />
 							The swamplands will never be the same again.</p>
@@ -148,8 +167,7 @@
 						<a href="#one" class="more scrolly">Learn More</a>
 					</section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
+				<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
 								<h2>About the Game | 2D Pixel Adventure</h2>
@@ -163,8 +181,7 @@
 						</div>
 					</section>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style2 special">
+				<section id="two" class="wrapper style2 special">
 						<div class="inner">
 							<header class="major">
 								<h2>2D Pixel Art &amp; Game Development</h2>
@@ -187,18 +204,15 @@
 						</div>
 					</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
+				<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
 								<h2>The Project Archive</h2>
 								<p>A look behind the curtain at the active development frameworks, visual concepts, and engine mechanics shaping the universe.</p>
 							</header>
 							
-							<!-- Dual Video Grid System -->
 							<div class="video-grid">
 								
-								<!-- CODING VIDEO MODULE 1 -->
 								<div class="video-card">
 									<h4>Coding Log #1</h4>
 									<video controls loop muted playsinline>
@@ -208,7 +222,6 @@
 									<p>Creating each main enemy individually in great detail, focusing on distinctive combat configurations and AI threat profiling profiles.</p>
 								</div>
 
-								<!-- CODING VIDEO MODULE 2 -->
 								<div class="video-card">
 									<h4>Coding Log #2</h4>
 									<video controls loop muted playsinline>
@@ -223,8 +236,7 @@
 						</div>
 					</section>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
+				<section id="cta" class="wrapper style4">
 						<div class="inner">
 							<header>
 								<h2>Join the Development Journey</h2>
@@ -237,8 +249,7 @@
 						</div>
 					</section>
 
-				<!-- Footer -->
-					<header style="text-align: center; margin-top: 4rem;">
+				<header style="text-align: center; margin-top: 4rem;">
 						<h2>Follow the Game</h2>
 					</header>
 					<footer id="footer">
@@ -257,8 +268,7 @@
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
