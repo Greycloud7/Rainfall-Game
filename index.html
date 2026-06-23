@@ -13,12 +13,46 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Lock header at the absolute top of the page globally so it doesn't follow scrolling */
+			/* Global Header Setup (Applies to both PC and Mobile) */
 			#header {
 				position: absolute !important;
 				top: 0 !important;
 				left: 0 !important;
 				width: 100% !important;
+				background: rgba(16, 20, 30, 0.85) !important; /* Subtle dark protective tint behind text */
+				backdrop-filter: blur(4px);
+				border-bottom: 1px solid rgba(33, 178, 166, 0.2); /* Clean aqua accent baseline line */
+				box-shadow: none !important;
+				height: 3.5em !important;
+				line-height: 3.5em !important;
+			}
+
+			/* Global Site Title formatting */
+			#header h1 a {
+				color: #21b2a6 !important; /* High-contrast aqua green */
+				font-weight: bold !important;
+				line-height: 3.5em !important;
+			}
+
+			/* Global Navigation and Menu Button formatting */
+			#header #nav,
+			#header .navPanelToggle {
+				display: block !important;
+				opacity: 1 !important;
+				visibility: visible !important;
+			}
+
+			#header .menuToggle {
+				color: #21b2a6 !important;
+				line-height: 3.5em !important;
+				background: transparent !important;
+			}
+
+			/* Three-line hamburger icon character coloring */
+			#header .menuToggle:before {
+				color: #21b2a6 !important;
+				opacity: 1 !important;
+				visibility: visible !important;
 			}
 
 			/* Custom tweaks to layout the video logs cleanly on desktop and mobile */
@@ -48,28 +82,11 @@
 				margin-bottom: 1rem;
 			}
 			
-			/* Mobile View Adjustments */
+			/* Responsive Layout Adjustments */
 			@media screen and (max-width: 768px) {
 				.video-grid {
 					grid-template-columns: 1fr;
 					gap: 1.5rem;
-				}
-				#header {
-					position: absolute !important;
-				}
-				
-				/* Make top logo/text link and menu toggle high-contrast aqua green on mobile */
-				#header h1 a {
-					color: #21b2a6 !important;
-					font-weight: bold !important;
-				}
-				#header .navPanelToggle .toggle:before,
-				#header #nav .menuToggle {
-					color: #21b2a6 !important;
-				}
-				/* Ensure the three-line hamburger icon itself shifts to aqua green */
-				#header .menuToggle:before {
-					color: #21b2a6 !important;
 				}
 			}
 
@@ -80,15 +97,19 @@
 				padding: 0.5rem 1.5rem !important;
 				line-height: 1.5 !important;
 			}
+
+			/* Force hide any automatic external template links inside mobile or desktop layouts */
+			#footer a[href*="html5up.net"],
+			.navPanel a[href*="html5up.net"] {
+				display: none !important;
+			}
 		</style>
 	</head>
 	<body class="landing is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
+				<header id="header" class="alt">
 						<h1><a href="index.html">Rainfall Soft Ltd</a></h1>
 						<nav id="nav">
 							<ul>
@@ -110,8 +131,7 @@
 						</nav>
 					</header>
 
-				<!-- Banner -->
-					<section id="banner">
+				<section id="banner">
 						<div class="inner">
 							<img src="game-logo.png" alt="Rainfall: The Frogspawn Chronicles Logo" style="max-width: 100%; width: 550px; height: auto; display: block; margin: 0 auto 2rem auto;" />
 							<p>A world of steel, magic, and forgotten lore.<br />
@@ -125,8 +145,7 @@
 						<a href="#one" class="more scrolly">Learn More</a>
 					</section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
+				<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
 								<h2>About the Game | 2D Pixel Adventure</h2>
@@ -140,8 +159,7 @@
 						</div>
 					</section>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style2 special">
+				<section id="two" class="wrapper style2 special">
 						<div class="inner">
 							<header class="major">
 								<h2>2D Pixel Art &amp; Game Development</h2>
@@ -164,18 +182,15 @@
 						</div>
 					</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
+				<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
 								<h2>The Project Archive</h2>
 								<p>A look behind the curtain at the active development frameworks, visual concepts, and engine mechanics shaping the universe.</p>
 							</header>
 							
-							<!-- Dual Video Grid System -->
 							<div class="video-grid">
 								
-								<!-- CODING VIDEO MODULE 1 -->
 								<div class="video-card">
 									<h4>Coding Log #1</h4>
 									<video controls loop muted playsinline>
@@ -185,7 +200,6 @@
 									<p>Creating each main enemy individually in great detail, focusing on distinctive combat configurations and AI threat profiling profiles.</p>
 								</div>
 
-								<!-- CODING VIDEO MODULE 2 -->
 								<div class="video-card">
 									<h4>Coding Log #2</h4>
 									<video controls loop muted playsinline>
@@ -200,8 +214,7 @@
 						</div>
 					</section>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
+				<section id="cta" class="wrapper style4">
 						<div class="inner">
 							<header>
 								<h2>Join the Development Journey</h2>
@@ -214,8 +227,7 @@
 						</div>
 					</section>
 
-				<!-- Footer -->
-					<header style="text-align: center; margin-top: 4rem;">
+				<header style="text-align: center; margin-top: 4rem;">
 						<h2>Follow the Game</h2>
 					</header>
 					<footer id="footer">
@@ -234,8 +246,7 @@
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
