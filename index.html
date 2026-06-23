@@ -1,280 +1,90 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Rainfall: The Frogspawn Chronicles</title>
+		<title>The Making Of | Rainfall: The Frogspawn Chronicles</title>
+		<link rel="icon" type="image/png" href="logo.png" />
+		<link rel="apple-touch-icon" href="logo.png" />
+		<meta name="description" content="Official website for Rainfall: The Frogspawn Chronicles, a dark fantasy 2D pixel art RPG developed by Anthony (Rainfall Soft)." />
+		<meta name="keywords" content="Rainfall game, Rainfall The Frogspawn Chronicles, Anthony developer, Rainfall Soft, indie game, 2D pixel art, action RPG, dark fantasy game" />
+		<meta name="author" content="Anthony" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Official website for Rainfall: The Frogspawn Chronicles, a fantasy 2D pixel art top down RPG developed by Anthony (Rainfall Soft Ltd)." />
-		<meta name="keywords" content="Rainfall game, Rainfall The Frogspawn Chronicles, top down RPG, indie games, pixel art RPG, Aseprite, Unity indie game, action RPG fantasy" />
-		<meta name="author" content="Anthony" />
-		<meta name="google-site-verification" content="91f09c69ebd5a730" />
-		<link class="icon" type="image/png" href="logo.png" />
-		<link rel="apple-touch-icon" href="logo.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 		<style>
-			/* Global Header Setup (Applies to both PC and Mobile) */
-			#header {
-				position: absolute !important;
-				top: 0 !important;
-				left: 0 !important;
-				width: 100% !important;
-				background: rgba(20, 35, 28, 0.9) !important; /* Rich, dark forest green background tint */
-				backdrop-filter: blur(4px);
-				border-bottom: 1px solid rgba(33, 178, 166, 0.3); /* Clean aqua accent baseline line */
-				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-				height: 3.5em !important;
-				line-height: 3.5em !important;
-			}
-
-			/* Global Site Title formatting */
-			#header h1 a {
-				color: #21b2a6 !important; /* High-contrast aqua green */
-				font-weight: bold !important;
-				line-height: 3.5em !important;
-			}
-
-			/* Global Navigation and Menu Button formatting */
-			#header #nav,
-			#header .navPanelToggle {
-				display: block !important;
-				opacity: 1 !important;
+			/* Overrides main.css loading and locking mechanics */
+			body {
+				background-color: #ffffff !important;
+				color: #000000 !important;
+				opacity: 1.0 !important;
 				visibility: visible !important;
 			}
 
-			#header .menuToggle {
-				color: #21b2a6 !important;
-				line-height: 3.5em !important;
-				background: transparent !important;
-			}
-
-			/* Three-line hamburger icon character coloring */
-			#header .menuToggle:before {
-				color: #21b2a6 !important;
-				opacity: 1 !important;
-				visibility: visible !important;
-			}
-
-			/* --- LOGO ILLUMINATION FIXES --- */
-			/* Tone down Spectral's default muddy background overlay so the banner is clearer */
-			#banner:after {
-				background: rgba(16, 22, 19, 0.4) !important; 
-			}
-
-			/* Add a soft, radiant glow behind your vector logo so it stands out beautifully against the dark background */
-			.main-game-logo {
-				max-width: 100%;
-				width: 550px;
-				height: auto;
-				display: block;
-				margin: 0 auto 2rem auto;
-				filter: drop-shadow(0 0 25px rgba(33, 178, 166, 0.5)) drop-shadow(0 0 45px rgba(5, 206, 120, 0.2));
-				background: radial-gradient(circle, rgba(33, 178, 166, 0.15) 0%, rgba(0,0,0,0) 70%);
-				padding: 1rem;
-				border-radius: 50%;
-			}
-
-			/* Custom tweaks to layout the video logs cleanly on desktop and mobile */
-			.video-grid {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 2rem;
-				width: 100%;
-				margin-top: 2rem;
-			}
-			.video-card {
-				background: rgba(255, 255, 255, 0.03);
-				border: 1px solid rgba(127, 169, 155, 0.15);
-				border-radius: 6px;
-				padding: 1.5rem;
-				text-align: left;
-			}
-			.video-card h4 {
-				margin-top: 0;
-				color: #21b2a6;
-			}
-			video {
-				width: 100%;
-				display: block;
-				border-radius: 4px;
-				background: #000;
-				margin-bottom: 1rem;
+			/* FIXED: Banish the ghost template elements and stray text entirely */
+			#header, #footer, .logo, #header + #footer {
+				display: none !important;
+				opacity: 0 !important;
+				visibility: hidden !important;
 			}
 			
-			/* Responsive Layout Adjustments */
-			@media screen and (max-width: 768px) {
-				.video-grid {
-					grid-template-columns: 1fr;
-					gap: 1.5rem;
-				}
-				.main-game-logo {
-					width: 85% !important; /* Give it a little tighter scaling on smaller phones */
-				}
-			}
-
-			/* Fix button text cutoff (...) in the CTA section */
-			#cta .actions .button {
-				white-space: normal !important;
-				height: auto !important;
-				padding: 0.5rem 1.5rem !important;
-				line-height: 1.5 !important;
-			}
-
-			/* Force hide any automatic external template links inside mobile or desktop layouts */
-			#footer a[href*="html5up.net"],
-			.navPanel a[href*="html5up.net"] {
+			body:before, body:after {
 				display: none !important;
+				opacity: 0 !important;
+			}
+			
+			/* Standardized text formatting */
+			h2, p, a {
+				color: #000000 !important;
+				text-shadow: none !important;
+			}
+			
+			p {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+				font-size: 1.1rem;
+				line-height: 1.6;
 			}
 		</style>
 	</head>
-	<body class="landing is-preload">
+	<body class="is-preload">
 
-		<div id="page-wrapper">
+		<nav style="max-width: 45em; margin: 1.5rem auto 0 auto; padding: 0 1rem; width: 100%; display: flex; gap: 1.5rem; border-bottom: 1px solid #000000; padding-bottom: 0.75rem; box-sizing: border-box;">
+			<a href="index.html" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; text-decoration: none;">← Home</a>
+			<a href="story.html" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; text-decoration: none;">The Lore</a>
+			<a href="making-of.html" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; text-decoration: underline;">Making Of</a>
+		</nav>
+ 
+		<main style="max-width: 45em; margin: 2rem auto 3rem auto; padding: 0 1rem; width: 100%; box-sizing: border-box;">
+			
+			<h2 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; font-weight: 700 !important; font-size: 2rem !important; border-bottom: 2px solid #000000; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+				Art & Making Of
+			</h2>
 
-				<header id="header" class="alt">
-						<h1><a href="index.html">Rainfall Soft Ltd</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="#banner">Intro</a></li>
-											<li><a href="#one">About Game</a></li>
-											<li><a href="#two">The Art</a></li>
-											<li><a href="#three">Coding Logs</a></li>
-											<li><a href="#cta">Contact</a></li>
-											<li><a href="story.html">The Lore</a></li>
-											<li><a href="making-of.html">Making Of</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+			<p style="margin-bottom: 1.25rem;">
+				Game development is a creative process, and it’s incredibly easy to keep adding extra features (more boss skills, massive secondary maps, complex systems). This is the number one reason solo indie games get delayed.
+			</p>
+			
+			<p style="margin-bottom: 1.25rem;">
+				Creating a 2D action RPG requires a balance between precise controls and intricate asset production. To ensure the gameplay feels intuitive and modern, <em>Rainfall</em> utilises a full 8-directional vector movement system that allows seamless diagonal traversal on controllers and keyboards.
+			</p>
 
-				<section id="banner">
-						<div class="inner">
-							<img src="game-logo.png" alt="Rainfall: The Frogspawn Chronicles Logo" class="main-game-logo" />
-							<p>A world of steel, magic, and forgotten lore.<br />
-							Dive into an unforgettable saga of rebellion, betrayal, and the journey to save your kingdom.<br />
-							The swamplands will never be the same again.</p>
-							<ul class="actions special" style="margin-top: 2.5rem;">
-								<li><a href="https://www.kickstarter.com/profile/rainfallgame" target="_blank" class="button primary" style="background-color: #05ce78 !important; box-shadow: none; color: #fff !important;">Follow on Kickstarter Soon</a></li>
-								<li><a href="#" class="button" style="background-color: #171a21 !important; color: #fff !important;">Wishlist on Steam Soon</a></li>
-							</ul>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
+			<p style="margin-bottom: 1.25rem;">
+				To maintain a sustainable development timeline as a solo creator, the visual rendering is built on a streamlined 4-way character animation framework (Up, Down, Left, Right). This allows me to focus on handcrafting detailed pixel art for every single animation frame, ensuring it is kept to the aesthetic of the game's world without risking the massive production delays often associated with massive asset sheets.
+			</p>
 
-				<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>About the Game | 2D Pixel Adventure</h2>
-								<p>Rainfall is an atmospheric 2D pixel adventure game set in a fantasy universe.<br />
-								Master 4-way combat movement, explore beautiful biome environments, and uncover forgotten lore<br />
-								as you fight the Corrupted Kings in order to save your Twin.</p>
-							</header>
-							<ul class="actions special">
-								<li><a href="story.html" class="button primary">Read the Story &amp; Lore</a></li>
-							</ul>
-						</div>
-					</section>
+			<p style="margin-bottom: 2rem;">
+				As a solo developer, I am solely responsible for everything from programming in Unity to hand drawing every pixel art tileset in Aseprite. And as unexpected technical bugs can impact development speed, the production timeline has been established to ensure it can be delivered on time. My priority is delivering a polished, fun 2D RPG experience rather than rushing out a buggy unfinished build.
+			</p>
 
-				<section id="two" class="wrapper style2 special">
-						<div class="inner">
-							<header class="major">
-								<h2>2D Pixel Art &amp; Game Development</h2>
-								<p>Building a 2D action fantasy world requires meticulous precision.</p>
-							</header>
-							<ul class="features">
-								<li class="icon fa-image">
-									<h3>Crafted Pixel Art</h3>
-									<p>Every environment, character frame, and blade of grass in <em>Rainfall</em> is crafted using dedicated 2D pixel art techniques, focusing on atmospheric tilesets.</p>
-								</li>
-								<li class="icon solid fa-gamepad">
-									<h3>Top-Down Mechanics</h3>
-									<p>Features smooth 4-way movement blueprints and custom physics to bring the dense, dangerous terrain to life.</p>
-								</li>
-								<li class="icon solid fa-code">
-									<h3>Pixel Design</h3>
-									<p>Bridging classic pixelated aesthetics with modern mechanics taking ideas from raw concept sketches to detailed sprite sheets animated frame by frame.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+		</main>
 
-				<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>The Project Archive</h2>
-								<p>A look behind the curtain at the active development frameworks, visual concepts, and engine mechanics shaping the universe.</p>
-							</header>
-							
-							<div class="video-grid">
-								
-								<div class="video-card">
-									<h4>Coding Log #1</h4>
-									<video controls loop muted playsinline>
-										<source src="images/enemy-coding.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-									<p>Creating each main enemy individually in great detail, focusing on distinctive combat configurations and AI threat profiling profiles.</p>
-								</div>
-
-								<div class="video-card">
-									<h4>Coding Log #2</h4>
-									<video controls loop muted playsinline>
-										<source src="images/enemy-coding2.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-									<p>Testing custom secondary terrain handling modules, skill behaviors, and specialized equipment loops dropped upon victory conditions.</p>
-								</div>
-
-							</div>
-
-						</div>
-					</section>
-
-				<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Join the Development Journey</h2>
-								<p>Subscribe to follow updates, design blogs, and milestone announcements directly from the studio.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="mailto:contact@rainfallgame.com" class="button fit primary">Contact Studio</a></li>
-								<li><a href="making-of.html" class="button fit">Explore Making Of</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<header style="text-align: center; margin-top: 4rem;">
-						<h2>Follow the Game</h2>
-					</header>
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://x.com/Rainfall_Soft" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.instagram.com/rainfall_soft/?hl=en" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://www.tiktok.com/@rainfallgame" target="_blank" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
-							<li><a href="https://youtube.com/@rainfallgame" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-							<li><a href="https://www.kickstarter.com/profile/rainfallgame" target="_blank" class="icon brands fa-kickstarter"><span class="label">Kickstarter</span></a></li>
-							<li><a href="mailto:contact@rainfallgame.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Rainfall Soft Ltd. All rights reserved.</li><li>Designed by: ANTHONY</li>
-						</ul>
-					</footer>
-
-			</div>
-
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<div class="mobile-safe-footer" style="padding: 2rem 1rem; text-align: center; clear: both;">
+			<p style="margin-bottom: 0.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+				<img src="logo.png" alt="Rainfall Soft Logo" style="width: 24px; height: auto; vertical-align: middle; margin-right: 6px; display: inline-block;" />
+				&copy; 2026 Rainfall Soft. Developed by Anthony. All Rights Reserved.
+			</p>
+			<p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Studio Contact: <a href="mailto:contact@rainfallgame.com" style="text-decoration: underline;">contact@rainfallgame.com</a></p>
+		</div>
 
 	</body>
 </html>
