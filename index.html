@@ -95,14 +95,34 @@
 			/* Completely strip any template oval limitations and keep the logo full size */
 			.main-game-logo {
 				max-width: 100%;
-				width: 550px !important;
+				width: 480px !important; /* Adjusted slightly down to make room for text titles nicely */
 				height: auto !important;
 				display: block !important;
-				margin: 0 auto 2rem auto !important;
+				margin: 0 auto 1rem auto !important;
 				border-radius: 0 !important; /* Prevents template oval clipping */
 				background: transparent !important;
 				padding: 0 !important;
-				filter: drop-shadow(0 0 20px rgba(33, 178, 166, 0.4)); /* Safe outer glow that won't clip */
+				filter: drop-shadow(0 0 25px rgba(33, 178, 166, 0.35)); /* Safe outer glow that won't clip */
+			}
+
+			/* Custom layout fixes for the newly restored game title text */
+			.banner-title-block {
+				margin-bottom: 2rem;
+			}
+			.banner-title-block h2 {
+				font-size: 3rem !important;
+				font-weight: 900 !important;
+				letter-spacing: 6px !important;
+				color: #ffffff !important;
+				margin: 0 0 0.25rem 0 !important;
+			}
+			.banner-title-block p.subtitle {
+				font-size: 1.1rem !important;
+				text-transform: uppercase !important;
+				letter-spacing: 3px !important;
+				color: #21b2a6 !important; /* High contrast aqua color for the subtitle */
+				font-weight: bold !important;
+				margin: 0 !important;
 			}
 
 			/* Custom tweaks to layout the video logs cleanly on desktop and mobile */
@@ -139,7 +159,14 @@
 					gap: 1.5rem;
 				}
 				.main-game-logo {
-					width: 85% !important;
+					width: 75% !important;
+				}
+				.banner-title-block h2 {
+					font-size: 2rem !important;
+					letter-spacing: 4px !important;
+				}
+				.banner-title-block p.subtitle {
+					font-size: 0.9rem !important;
 				}
 			}
 
@@ -188,7 +215,15 @@
 			<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<img src="game-logo.png" alt="Rainfall: The Frogspawn Chronicles Logo" class="main-game-logo" />
+					<!-- Your beautiful new company cloud logo image -->
+					<img src="game-logo.png" alt="Rainfall Soft Company Logo" class="main-game-logo" />
+					
+					<!-- RESTORED: Explicit game title styling block right beneath the asset -->
+					<div class="banner-title-block">
+						<h2>RAINFALL</h2>
+						<p class="subtitle">The Frogspawn Chronicles</p>
+					</div>
+
 					<p>A world of steel, magic, and forgotten lore.<br />
 					Dive into an unforgettable saga of rebellion, betrayal, and the journey to save your kingdom.<br />
 					The swamplands will never be the same again.</p>
