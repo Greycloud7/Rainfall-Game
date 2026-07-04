@@ -102,7 +102,7 @@
 				filter: drop-shadow(0 0 25px rgba(33, 178, 166, 0.35));
 			}
 
-			/* Custom layout fixes for the newly restored game title text */
+			/* Custom layout fixes for the game title text and trademark scaling */
 			.banner-title-block {
 				margin-bottom: 2rem;
 			}
@@ -112,6 +112,17 @@
 				letter-spacing: 6px !important;
 				color: #ffffff !important;
 				margin: 0 0 0.25rem 0 !important;
+				position: relative;
+				display: inline-block;
+			}
+			.banner-title-block h2 .tm-symbol {
+				font-size: 1.25rem !important;
+				vertical-align: super;
+				position: absolute;
+				top: -0.2em;
+				margin-left: 4px;
+				font-weight: normal !important;
+				letter-spacing: normal !important;
 			}
 			.banner-title-block p.subtitle {
 				font-size: 1.1rem !important;
@@ -161,6 +172,9 @@
 				.banner-title-block h2 {
 					font-size: 2rem !important;
 					letter-spacing: 4px !important;
+				}
+				.banner-title-block h2 .tm-symbol {
+					font-size: 0.85rem !important;
 				}
 				.banner-title-block p.subtitle {
 					font-size: 0.9rem !important;
@@ -215,7 +229,8 @@
 					<img src="game-logo.png" alt="Rainfall Soft Company Logo" class="main-game-logo" />
 					
 					<div class="banner-title-block">
-						<h2>RAINFALL</h2>
+						<!-- UPDATED: Added registered trademark symbol inline with specific positioning layout -->
+						<h2>RAINFALL<span class="tm-symbol">&reg;</span></h2>
 						<p class="subtitle">The Frogspawn Chronicles</p>
 					</div>
 
@@ -325,7 +340,7 @@
 			<footer id="footer">
 				<ul class="icons">
 					<li><a href="https://x.com/Rainfall_Soft" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="https://www.instagram.com/rainfall_soft/?hl=en" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://www.indigo.com/rainfall_soft/?hl=en" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 					<li><a href="https://discord.gg/RxF3TJZe2T" target="_blank" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
 					<li><a href="https://www.tiktok.com/@rainfall.soft" class="icon brands fa-tiktok" target="_blank" rel="noopener noreferrer"><span class="label">TikTok</span></a></li>
 					<li><a href="https://youtube.com/@rainfallgame" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
