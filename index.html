@@ -12,6 +12,10 @@
 		<link rel="apple-touch-icon" href="logo.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Lightbox Gallery CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" />
+
 		<style>
 			/* Global Header Setup (Applies to both PC and Mobile) */
 			#header {
@@ -241,6 +245,13 @@
 					</header>
 					<ul class="actions special">
 						<li><a href="story.html" class="button primary">Read the Story &amp; Lore</a></li>
+						<!-- Slideshow Gallery Trigger -->
+						<li class="gallery">
+							<a href="images/screenshot1.png" data-caption="Rainfall - Combat Preview" class="button">View Screenshots Gallery</a>
+							<!-- Additional Hidden Slides -->
+							<a href="images/screenshot2.png" data-caption="Rainfall - Swampland Exploration" style="display:none;"></a>
+							<a href="images/screenshot3.png" data-caption="Rainfall - Boss Battle" style="display:none;"></a>
+						</li>
 					</ul>
 				</div>
 			</section>
@@ -347,6 +358,14 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<!-- Lightbox Gallery JS & Initializer -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" async></script>
+		<script>
+			window.addEventListener('load', function() {
+				baguetteBox.run('.gallery');
+			});
+		</script>
 
 	</body>
 </html>
